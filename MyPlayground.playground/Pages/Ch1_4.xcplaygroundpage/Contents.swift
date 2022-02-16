@@ -1,7 +1,3 @@
-//: [Previous](@previous)
+import Swift
 
-import Foundation
 
-var greeting = "Hello, playground"
-
-//: [Next](@next)
