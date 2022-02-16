@@ -57,3 +57,12 @@ print(someString)
 
 
 
+// 생각해보기 =============================
+// 다음 코드에서 integer, floatingPoint, apple 상수는 각각 어떤 타입이 될까?
+let integer = 100 // Int
+let floatingPoint = 12.34 // Float -> Double이었다!
+let apple = "A" // String
+
+print(type(of: integer))
+print(type(of: floatingPoint))
+print(type(of: apple))
