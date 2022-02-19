@@ -31,3 +31,13 @@ someFunction(someOptionalParam: nil)
 // 2. 옵셔널 문법과 선언
 // - 옵셔널 문법 = enum + generics
 // - 옵셔널 선언
+/*
+enum Optional<Wrapped>: ExpressibleByNilLiteral {
+         case none
+         case some(Wrapped)
+}
+*/
+
+// let optionalValue: Optional<Int> = nil
+// let optionalValue: Int? =nil
+
