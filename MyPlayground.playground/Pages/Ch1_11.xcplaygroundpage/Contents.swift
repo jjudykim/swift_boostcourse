@@ -76,6 +76,9 @@ case .some(let value):
     print("Value is \(value)")
 }
 
+// 기존 변수처럼 사용이 불가능하다!!
+// optionalValue3 += 1
+
 // nil 할당 가능
 optionalValue3 = nil
 
