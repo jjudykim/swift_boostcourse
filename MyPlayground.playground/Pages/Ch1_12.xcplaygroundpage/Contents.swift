@@ -66,3 +66,22 @@ if let name = myName, let friend = yourName
 {
     print("\(name) and \(friend)")
 }
+
+
+// - 강제추출
+// : 옵셔널에 값이 들어있는지 아닌지 확인하지 않고 강제로 값을 꺼냄!
+// -> 만약 값이 없을 경우(nil) 런타임 오류가 발생하기 때문에 추천하지 않음
+var myName2: String? = "yagom"
+var yourName2: String! = nil
+printName(myName2!)
+
+myName2 = nil
+// print(myName2!)
+// 강제 추출시 값이 없기 때문에 런타임 오류 발생
+
+yourName = nil
+// printName(yourName)
+// nil 값이 전달되기 때문에 런타임 오류 발생
+
+
+// 정말 꼭 필요한 경우에 한하여, 내가 책임질 수 있는 상ㄹ황이 아니라면 옵셔널 강제추출을 사용하지 말기~~~!!
