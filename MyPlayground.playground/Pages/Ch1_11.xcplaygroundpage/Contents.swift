@@ -31,15 +31,16 @@ someFunction(someOptionalParam: nil)
 // 2. 옵셔널 문법과 선언
 // - 옵셔널 문법 = enum + generics
 // - 옵셔널 선언
-/*
+
+/* 내부적으로 이렇게 선언이 되어있다고 하는 듯..
 enum Optional<Wrapped>: ExpressibleByNilLiteral {
          case none
          case some(Wrapped)
 }
 */
 
-// let optionalValue: Optional<Int> = nil
-// let optionalValue: Int? =nil
+let optionalValue: Optional<Int> = nil
+let optionalValue2: Int? = nil
 
 
 // - 옵셔널 표현
@@ -48,9 +49,9 @@ enum Optional<Wrapped>: ExpressibleByNilLiteral {
 var implicitlyUnwrappedOptionalValue: Int! = 100
 
 switch implicitlyUnwrappedOptionalValue {
-case .none:
+case .none:   // 값이 없는 경우
     print("This Optional variable is nil")
-case .some(let value):
+case .some(let value):   // 어떤 값이 들어온 경우!
     print("Value is \(value)")
 }
 
@@ -64,11 +65,11 @@ implicitlyUnwrappedOptionalValue = nil
 //implicitlyUnwrappedOptionalValue = implicitlyUnwrappedOptionalValue + 1
 
 
-// 2) 물음표(?)를 이용한 옵셔널
+// 2) 물음표(?)를 이용한 옵셔널 - 일반적인 옵셔널
 // Optional
-var optionalValue: Int? = 100
+var optionalValue3: Int? = 100
 
-switch optionalValue {
+switch optionalValue3 {
 case .none:
     print("This Optional variable is nil")
 case .some(let value):
@@ -76,7 +77,7 @@ case .some(let value):
 }
 
 // nil 할당 가능
-optionalValue = nil
+optionalValue3 = nil
 
 // 기존 변수처럼 사용불가 - 옵셔널과 일반 값은 다른 타입이므로 연산불가
 //optionalValue = optionalValue + 1
