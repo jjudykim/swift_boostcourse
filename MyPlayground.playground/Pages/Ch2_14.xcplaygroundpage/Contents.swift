@@ -125,3 +125,29 @@ jjudy.selfIntroduce()
 let jina: Student = Student()
 jina.name = "jina"
 jina.selfIntroduce()
+
+
+
+
+// 생각해보기!!
+// '사람'을 나타내는 클래스를 만들어보자
+// - Hint 1 : 사람이 가질 수 있는 속성을 프로퍼티로, 사람이 할 수 있는 행동을 메소드로 구현할 수 있다.
+// - Hint 2 : 이름 짓기 규칙을 다시 한 번 살펴보도록 하자!
+class Person
+{
+    var name: String = "unknown"
+    var age: Int = 0
+    var from: String = "지역"
+    
+    func selfIntroduce()
+    {
+        print("안녕하세요, 저는 \(from)에서 온 \(age)세 \(name)입니다")
+    }
+}
+
+var jjudy2: Person = Person()
+jjudy2.name = "쭈디"
+jjudy2.age = 24
+jjudy2.from = "천안"
+jjudy2.selfIntroduce()
+
