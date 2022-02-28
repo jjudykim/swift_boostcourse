@@ -99,7 +99,6 @@ let initalizedDictionary: [String: String] = ["name": "yagom", "gender": "male"]
 // -> "name"이라는 키에 해당하는 값이 없을 수 있으므로 String 타입의 값이 나올 것이라는 보장이 없어 컴파일 오류 발생
 
 
-
 // 3. Set ================================
 // 중복되지 않는 멤버가 순서없이 존재하는 컬렉션
 // Array, Dictionary와 다르게 축약형이 존재하지 않음
@@ -115,15 +114,17 @@ integerSet.insert(99)
 integerSet.insert(99)
 integerSet.insert(100)
 
-print(integerSet) // {100, 99, 1}
+print(integerSet) // [1, 99, 100]
 
 // contains: 멤버 포함 여부 확인
 print(integerSet.contains(1)) // true
 print(integerSet.contains(2)) // false
 
 // remove: 멤버 삭제
-integerSet.remove(99) // {100, 1}
-integerSet.removeFirst() // {1}
+integerSet.remove(99) // [1, 100]
+print(integerSet)
+print(integerSet.removeFirst()) // {1}
+print("================")
 
 // count: 멤버 개수
 integerSet.count // 1
@@ -168,3 +169,4 @@ dump(bookInfo)
 // -> Array, 변수
 var boostcampStudent: Array<String> = ["김주향", "쭈디", "jjudy"]
 dump(boostcampStudent)
+

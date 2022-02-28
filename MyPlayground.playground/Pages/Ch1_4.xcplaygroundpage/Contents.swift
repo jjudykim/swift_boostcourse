@@ -20,12 +20,12 @@ someBool = false
 // Int : 정수 타입, 기본적으로 64비트 정수형
 // UInt : 양의 정수 타입, 기본적으로 64비트 양의 정수형
 
-var someInt: Int = -100
+var someInt: Int = 100
 // someInt = 100.1 -> 컴파일 오류, 정수형이니까!
 
 var someUInt: UInt = 100
 // someUInt = -100 -> 컴파일 오류, 양의 정수형이니까!
-// someUInt = someInt -> 컴파일 오류, 둘의 데이터 타입이 다름
+// someUInt = someInt // -> 컴파일 오류, 둘의 데이터 타입이 다름
 
 
 // 3. Float, Double ===============
