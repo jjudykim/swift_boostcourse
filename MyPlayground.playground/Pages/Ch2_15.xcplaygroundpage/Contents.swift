@@ -25,3 +25,36 @@ enum BoostCamp
     case androidCamp
     case webCamp
 }
+//
+
+
+// 2. 열거형 사용
+// - 타입이 명확할 경우, 열거형의 이름을 생략할 수 있다
+// - switch 구문에서 사용하기 좋다
+enum Weekday
+{
+    case mon
+    case tue
+    case wed
+    case thu, fri, sat, sun
+}
+
+// 열거형 타입과 케이스를 모두 사용해도 된다
+var day: Weekday = Weekday.mon
+
+//타입이 명확하다면 .케이스 처럼 표현해도 무방하다
+day = .tue
+
+print(day)
+
+// switch의 비교값에 열거형 타입이 위치할 때
+// 모든 열거형 케이스를 포함한다면 default를 작성할 필요가 없다
+switch day
+{
+case .mon, .tue, .wed, .thu:
+    print("평일입니다")
+case Weekday.fri:
+    print("불금 파티!!")
+case .sat, .sun:
+    print("신나는 주말!!")
+}
