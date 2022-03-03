@@ -5,6 +5,8 @@ import Swift
 // Dictionary : '키'와 '값'의 쌍으로 이루어진 컬렉션
 // Set : 순서가 없고, 멤버가 유일한 컬렉션
 
+
+
 // 1. Array =========================
 // 멤버가 순서(인덱스)를 가진 리스트 형태의 컬렉션 타입
 // 여러가지 리터럴 문법을 활용할 수 있어 표현 방법이 다양함
@@ -97,6 +99,7 @@ let initalizedDictionary: [String: String] = ["name": "yagom", "gender": "male"]
 
 // let someValue: String = initalizedDictionary["name"]
 // -> "name"이라는 키에 해당하는 값이 없을 수 있으므로 String 타입의 값이 나올 것이라는 보장이 없어 컴파일 오류 발생
+
 
 
 // 3. Set ================================
