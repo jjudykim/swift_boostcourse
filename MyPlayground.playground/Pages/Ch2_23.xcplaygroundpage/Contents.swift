@@ -91,9 +91,9 @@ jjudy?.home?.guard?.job = "경비원"
 var guardJob: String
 
 guardJob = jjudy?.home?.guard?.job ?? "슈퍼맨"
-print(guardJob)
+print(guardJob) // 경비원
                                 
 jjudy?.home?.guard?.job = nil
 
 guardJob = jjudy?.home?.guard?.job ?? "슈퍼맨"
-print(guardJob)
+print(guardJob) // 슈퍼맨
