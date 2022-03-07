@@ -79,3 +79,21 @@ print(jjudy?.home?.guard?.name)
 print(jjudy?.home?.guard?.job)
 
 jjudy?.home?.guard?.job = "경비원"
+                    
+                    
+                    
+                    
+// 2. nil 병합 연산자 ========================
+// - 중위 연산자 ??
+// - Optional ?? Value
+// - 옵셔널 값이 nil일 경우, 우측의 값을 반환한다
+// - 띄어쓰기에 주의해야 한다
+var guardJob: String
+
+guardJob = jjudy?.home?.guard?.job ?? "슈퍼맨"
+print(guardJob)
+                                
+jjudy?.home?.guard?.job = nil
+
+guardJob = jjudy?.home?.guard?.job ?? "슈퍼맨"
+print(guardJob)
