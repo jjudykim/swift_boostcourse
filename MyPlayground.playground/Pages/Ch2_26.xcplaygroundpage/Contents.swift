@@ -25,7 +25,7 @@ import CoreFoundation
 // 3. 구현 ============================================
 // << 프로퍼티 요구 >>
 // - 프로퍼티 요구는 항상 var 키워드를 사용한다
-// - get은 읽기만 가능해도 상관 없다는 뜻이다9ㅑ
+// - get은 읽기만 가능해도 상관 없다는 뜻이다
 // - get과 set을 모두 명시하면 읽기 쓰기 모두 가능한 프로퍼티여야 한다
 protocol Talkable {
     // 프로퍼티 요구
@@ -54,7 +54,7 @@ struct Person: Talkable {
     // 읽기 전용 프로퍼티 요구는 연산 프로퍼티로 대체가 가능하다
     var language: String { return "한국어" }
     
-    // 물론 읽기, 쓰기, 프로퍼티도 연산 프로퍼티로 대체할 수 있다
+    // 물론 읽기, 쓰기 프로퍼티도 연산 프로퍼티로 대체할 수 있다
     var subject: String = ""
     var topic: String {
         set {
@@ -157,18 +157,18 @@ class SubClass: SuperClass, Writeable, ReadSpeakable {
 
 // 5. 프로토콜 준수 확인 ======================================
 // - is, as 연산자를 사용해서 인스턴스가 특정 프로토콜을 준수하는지 확인할 수 있다
-let sup: SuperClass = SuperClass()
-let sub: SubClass = SubClass()
+let sup: SuperClass = SuperClass()  // Readable
+let sub: SubClass = SubClass()      // Readable, Writeable, ReadSpeakable
 
-var someAny: Any = sup
-someAny is Readable
-someAny is ReadSpeakable
+var someAny: Any = sup      // Readable
+someAny is Readable  // true
+someAny is ReadSpeakable  // false
 
-someAny = sub
-someAny is Readable
-someAny is ReadSpeakable
+someAny = sub  // Readable, Writeable, ReadSpeakable
+someAny is Readable  // true
+someAny is ReadSpeakable  // true
 
-someAny = sup
+someAny = sup  // Readable
 
 if let someReadable: Readable = someAny as? Readable {
     someReadable.read()
@@ -178,7 +178,7 @@ if let someReadSpeakable: ReadSpeakable = someAny as? ReadSpeakable {
     someReadSpeakable.speak()
 } // 동작하지 않음
 
-someAny = sub
+someAny = sub  // Readable, Writeable, ReadSpeakable
 
 if let someReadable: Readable = someAny as? Readable {
     someReadable.read()
