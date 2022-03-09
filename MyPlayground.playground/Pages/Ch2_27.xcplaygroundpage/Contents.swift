@@ -125,3 +125,5 @@ extension String {
 let stringFormInt: String = String(int: 100)
 
 // 익스텐션을 활용하면 다양하고 강력한 기능을 구현할 수 있지만, 해당 타입에 적합한 익스텐션을 구현하도록 주의해야 한다
+
+// 0309 Ch2_24~27 복습완료
